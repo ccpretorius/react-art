@@ -1,0 +1,50 @@
+<!-- Create a repository on github, then run these commands in your project terminal:
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/ccpretorius/react-art.git
+git branch -M main
+git push -u origin main
+
+git push -f origin main
+git push -->
+
+# maybe required: git push --set-upstream origin main
+
+#############################
+styled components
+npm install styled-components
+
+Inside AuthInputs.jsx:
+import { styled } from 'styled-components'
+
+styled.div``  => this is a js object with elements accessible on it attached to a Tagged Template. The Tagged template is like a function that receives this Template literal as an input.
+So you can copy the styles from the index.css file in our tutorial into this Template literals here:
+
+styled.div`
+display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+`
+You can write standard css code here, no camelCase or jsx notation.
+
+This component will automatically receives a div that will have these styles applied to it
+
+This should now be stored inside a new constant variable:
+
+const ControlContainer = styled.div`
+display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+`
+
+This can now be used to replace <div clasName="control"></div> with
+<ControlContainer>
+</ControlContainer>
+
+All props in the ternary conditional operator would be carried forward
+Remember you cannot use the logical AND (&&) operator by evaluating the left-hand expression and, if it is truthy, returning the right-hand expression e.g {email && do something}
+
+###########################
